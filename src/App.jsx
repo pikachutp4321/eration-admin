@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import {  Routes, Route, HashRouter } from 'react-router-dom';
 import Home from './components/Home';
 import Login from './components/Login';
 import Message from './components/Message';
@@ -9,7 +9,7 @@ import Navbar from './components/Navbar';
 import BACKGROUND from './assets/QT-ration-cards.jpg';
 import AddUser from './components/AddUser';
 function App() {
-    return (<BrowserRouter>
+    return (<HashRouter>
 			<Navbar />
 			<div className='absolute -z-10'>
 				<img src={BACKGROUND} alt='' className='full'/>
@@ -22,6 +22,6 @@ function App() {
 				<Route path='/withdraw' element={<Withdraw />}/>
 				<Route path='/login' element={<Login />}/>
 			</Routes>
-		</BrowserRouter>);
+		</Hash>);
 }
 export default App;
